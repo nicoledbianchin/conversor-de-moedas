@@ -14,4 +14,13 @@ public class TestesInterpretadorDeEntrada {
         Assert.assertEquals(moedaInicial, "BRL");
     }
 
+    @Test
+    public void retornaApenasValor(){
+        String entrada = "BRL100 CLP";
+
+        Double valor = interpretador.extrairValor(entrada);
+
+        Assert.assertEquals(java.util.Optional.of(valor), java.util.Optional.of(100.0));
+    }
+
 }
