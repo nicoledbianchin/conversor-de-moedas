@@ -14,4 +14,13 @@ public class TestesValidadorDeMoedas {
         Assert.assertEquals(true, valida);
     }
 
+    @Test
+    public void testaMoedaInvalida(){
+        String moeda = "ARS";
+
+        Boolean invalida = validador.validarMoeda(moeda);
+
+        Assert.assertEquals(false, invalida);
+    }
+
 }
