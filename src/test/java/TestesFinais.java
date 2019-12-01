@@ -26,15 +26,4 @@ public class TestesFinais {
         Assert.assertEquals(java.util.Optional.of(17565.0), java.util.Optional.of(resultado));
     }
 
-    @Test
-    public void calculoDoisRetornos(){
-        String entrada = "BRL100 CLP EUR";
-        String moedaInicial = interpretadorDeEntrada.extrairMoedaInicial(entrada);
-        String moedaFinal = interpretadorDeEntrada.extrairMoedaFinal(entrada);
-        String moedasConversao = interpretadorDeEntrada.detectarMoedaParaConversao(moedaInicial, moedaFinal);
-        Double valor = interpretadorDeEntrada.extrairValor(entrada);
-
-
-    }
-
 }
