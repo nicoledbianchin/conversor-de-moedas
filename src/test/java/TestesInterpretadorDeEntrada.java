@@ -23,4 +23,13 @@ public class TestesInterpretadorDeEntrada {
         Assert.assertEquals(java.util.Optional.of(valor), java.util.Optional.of(100.0));
     }
 
+    @Test
+    public void retornaUmaMoedaFinal(){
+        String entrada = "BRL100 CLP";
+
+        String moedaFinal = interpretador.extrairMoedaFinal(entrada);
+
+        Assert.assertEquals(moedaFinal, "CLP");
+    }
+
 }
