@@ -1,19 +1,22 @@
-public class TaxaDeCambio {
+public enum TaxaDeCambio {
 
-    Moeda origem;
-    Moeda destino;
-    Double taxaDeCambio;
+    BRLCLP(175.65),
+    BRLEUR(0.23),
+    BRLUSD(0.23),
+    CLPBRL(0.0057),
+    CLPEUR(0.0013),
+    CLPUSD(0.0012),
+    EURBRL(4.29),
+    EURCLP(754.01),
+    EURUSD(1.101),
+    USDBRL(4.23),
+    USDCLP(804.5),
+    USDEUR(0.907);
 
-    public String determinarTaxaDeCambio(String moedaInicial, String moedaFinal){
-        for (Moeda moeda : Moeda.values()){
-            if (moedaInicial.equals(moeda.name())){
-                origem = moeda;
-            }
-            if(moedaFinal.equals(moeda.name())){
-                destino = moeda;
-            }
-        }
-        return origem + " " +destino;
+    private Double valor;
+
+    TaxaDeCambio(Double valor){
+        this.valor = valor;
     }
 
 }
