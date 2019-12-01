@@ -11,7 +11,7 @@ public class TestesInterpretadorDeEntrada {
 
         String moedaInicial = interpretador.extrairMoedaInicial(entrada);
 
-        Assert.assertEquals(moedaInicial, "BRL");
+        Assert.assertEquals("BRL", moedaInicial);
     }
 
     @Test
@@ -20,7 +20,7 @@ public class TestesInterpretadorDeEntrada {
 
         Double valor = interpretador.extrairValor(entrada);
 
-        Assert.assertEquals(java.util.Optional.of(valor), java.util.Optional.of(100.0));
+        Assert.assertEquals(java.util.Optional.of(100.0), java.util.Optional.of(valor));
     }
 
     @Test
@@ -29,7 +29,7 @@ public class TestesInterpretadorDeEntrada {
 
         String moedaFinal = interpretador.extrairMoedaFinal(entrada);
 
-        Assert.assertEquals(moedaFinal, "CLP");
+        Assert.assertEquals("CLP", moedaFinal);
     }
 
     @Test
@@ -38,7 +38,16 @@ public class TestesInterpretadorDeEntrada {
 
         String moedasFinais = interpretador.extrairMoedaFinal(entrada);
 
-        Assert.assertEquals(moedasFinais, "CLP EUR");
+        Assert.assertEquals("CLP EUR", moedasFinais);
+    }
+
+    @Test
+    public void retornaTodasMoedasFinais(){
+        String entrada = "BRL100 EUR USD CLP ARS";
+
+        String moedasFinais = interpretador.extrairMoedaFinal(entrada);
+
+        Assert.assertEquals("EUR USD CLP ARS", moedasFinais);
     }
 
 }
