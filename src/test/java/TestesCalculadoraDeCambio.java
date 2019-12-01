@@ -7,11 +7,11 @@ public class TestesCalculadoraDeCambio {
 
     @Test
     public void retornaValorDaTaxa(){
-        String entrada = "BRLCLP";
+        String entrada = "BRLEUR";
 
         Double resultado = calculadoraDeCambio.determinarTaxaDeCambio(entrada);
 
-        Assert.assertEquals(java.util.Optional.of(175.65), java.util.Optional.of(resultado));
+        Assert.assertEquals(java.util.Optional.of(0.23), java.util.Optional.of(resultado));
     }
 
     @Test
