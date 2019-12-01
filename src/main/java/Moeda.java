@@ -1,7 +1,8 @@
 public enum Moeda {
     BRL("BRL"),
     CLP("CLP"),
-    EUR("EUR");
+    EUR("EUR"),
+    USD("USD");
 
     private String nome;
 
