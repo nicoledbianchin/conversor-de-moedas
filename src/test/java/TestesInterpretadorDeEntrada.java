@@ -60,14 +60,14 @@ public class TestesInterpretadorDeEntrada {
         Assert.assertEquals("BRLCLP", resultado);
     }
 
-//    @Test
-//    public void retornaMoedasIniciaisEFinais(){
-//        String moedaInicial = "BRL";
-//        String moedaFinal = "CLP EUR USD";
-//
-//        String resultado = interpretador.detectarMoedasParaConversao(moedaInicial, moedaFinal);
-//
-//        Assert.assertEquals("BRLCLP BRLEUR BRLUSD", resultado);
-//    }
+    @Test
+    public void retornaMoedasIniciaisEFinais(){
+        String moedaInicial = "BRL";
+        String moedaFinal = "CLP EUR USD";
+
+        String resultado = interpretador.detectarMoedasParaConversao(moedaInicial, moedaFinal);
+
+        Assert.assertEquals("BRLCLP BRLEUR BRLUSD", resultado);
+    }
 
 }
