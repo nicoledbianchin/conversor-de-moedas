@@ -14,4 +14,11 @@ public class TestesCalculadoraDeCambio {
         Assert.assertEquals(java.util.Optional.of(175.65), java.util.Optional.of(resultado));
     }
 
+    @Test
+    public void calcularValorFinal(){
+        Double resultado = calculadoraDeCambio.calcularValorFinal(100.0, 175.65);
+
+        Assert.assertEquals(java.util.Optional.of(17565.0), java.util.Optional.of(resultado));
+    }
+
 }
