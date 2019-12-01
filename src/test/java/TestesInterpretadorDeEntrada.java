@@ -55,7 +55,7 @@ public class TestesInterpretadorDeEntrada {
         String moedaInicial = "BRL";
         String moedaFinal = "CLP";
 
-        String resultado = interpretador.detectarMoedasParaConversao(moedaInicial, moedaFinal);
+        String resultado = interpretador.detectarMoedaParaConversao(moedaInicial, moedaFinal);
 
         Assert.assertEquals("BRLCLP", resultado);
     }
@@ -65,7 +65,7 @@ public class TestesInterpretadorDeEntrada {
         String moedaInicial = "BRL";
         String moedaFinal = "CLP EUR USD";
 
-        String resultado = interpretador.detectarMoedasParaConversao(moedaInicial, moedaFinal);
+        String resultado = interpretador.detectarMoedaParaConversao(moedaInicial, moedaFinal);
 
         Assert.assertEquals("BRLCLP BRLEUR BRLUSD", resultado);
     }
