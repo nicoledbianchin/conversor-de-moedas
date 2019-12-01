@@ -1,3 +1,5 @@
+package tratamentoDeDados;
+
 public class InterpretadorDeEntrada {
 
     String moedaInicial;

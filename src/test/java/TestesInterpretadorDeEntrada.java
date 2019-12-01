@@ -1,5 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
+import tratamentoDeDados.InterpretadorDeEntrada;
 
 public class TestesInterpretadorDeEntrada {
 

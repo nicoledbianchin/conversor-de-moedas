@@ -1,3 +1,7 @@
+package calculos;
+
+import valoresMoedasETaxas.TaxaDeCambio;
+
 public class CalculadoraDeCambio {
 
     private Double taxaDeCambio;

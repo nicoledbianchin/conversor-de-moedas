@@ -1,3 +1,8 @@
+import calculos.CalculadoraDeCambio;
+import tratamentoDeDados.FormatadorDeSaida;
+import tratamentoDeDados.InterpretadorDeEntrada;
+import validacoes.ValidadorDeMoedas;
+
 import java.util.Scanner;
 
 public class App {
@@ -20,10 +25,10 @@ public class App {
         Boolean validacaoMoedaFinal = validadorDeMoedas.validarMoeda(moedaFinal);
 
         if (!validacaoMoedaInicial){
-            System.out.println("Moeda não suportada: " + moedaInicial);
+            System.out.println("valoresMoedasETaxas.Moeda não suportada: " + moedaInicial);
         }
         if (!validacaoMoedaFinal){
-            System.out.println("Moeda não suportada: " + moedaFinal);
+            System.out.println("valoresMoedasETaxas.Moeda não suportada: " + moedaFinal);
         }
 
         Double valor = interpretadorDeEntrada.extrairValor(entrada);

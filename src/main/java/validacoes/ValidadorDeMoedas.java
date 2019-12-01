@@ -1,3 +1,7 @@
+package validacoes;
+
+import valoresMoedasETaxas.Moeda;
+
 public class ValidadorDeMoedas {
 
     private Boolean moedaValida = false;

@@ -1,3 +1,5 @@
+package valoresMoedasETaxas;
+
 public enum TaxaDeCambio {
 
     BRLCLP(175.65),

@@ -1,3 +1,5 @@
+package valoresMoedasETaxas;
+
 public enum Moeda {
     BRL("BRL"),
     CLP("CLP"),
