@@ -1,10 +1,8 @@
 public class InterpretadorDeEntrada {
 
-    private String moedaInicial;
-    private Double valor;
-    private String moedaFinal;
-    private String[] moedas;
-    private String moedasFinais;
+    String moedaInicial;
+    Double valor;
+    String moedaFinal;
 
     public String extrairMoedaInicial(String entrada) {
         moedaInicial = entrada.substring(0, 3);
@@ -17,17 +15,19 @@ public class InterpretadorDeEntrada {
     }
 
     public String extrairMoedaFinal(String entrada){
-        moedas = entrada.split(" ");
-        moedaFinal = moedas[1];
-        moedasFinais = moedas[1];
-        if (moedas.length > 2){
-            for (int i = 2; i < moedas.length; i++){
-                moedasFinais = moedasFinais + " " + moedas[i];
+        moedaFinal = entrada.split(" ")[1];
+        if (entrada.split(" ").length > 2){
+            for (int i = 2; i < entrada.split(" ").length; i++){
+                moedaFinal = moedaFinal + " " + entrada.split(" ")[i];
             }
-            return moedasFinais;
+            return moedaFinal;
         } else{
             return moedaFinal;
         }
+    }
+
+    public String detectarMoedasParaConversao(String moedaInicial, String moedaFinal){
+        return moedaInicial + moedaFinal;
     }
 
 }

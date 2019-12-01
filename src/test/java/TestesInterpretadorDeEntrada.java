@@ -50,4 +50,14 @@ public class TestesInterpretadorDeEntrada {
         Assert.assertEquals("EUR USD CLP ARS", moedasFinais);
     }
 
+    @Test
+    public void retornaMoedaInicialMaisFinal(){
+        String moedaInicial = "BRL";
+        String moedaFinal = "CLP";
+
+        String resultado = interpretador.detectarMoedasParaConversao(moedaInicial, moedaFinal);
+
+        Assert.assertEquals("BRLCLP", resultado);
+    }
+
 }
