@@ -28,7 +28,17 @@ public class InterpretadorDeEntrada {
     }
 
     public String detectarMoedasParaConversao(String origem, String destino){
+        if (destino.length() > 3){
+            String[] lista = destino.split(" ");
+            String moedas = origem + lista[0];
+            for (int i = 1; i < lista.length; i++){
+                moedas = moedas + " " + origem + lista[i];
+            }
+            return moedas;
+        }
+        else {
             return origem + destino;
+        }
     }
 
 }
