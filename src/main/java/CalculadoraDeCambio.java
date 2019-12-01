@@ -7,7 +7,7 @@ public class CalculadoraDeCambio {
             determinarTaxasDeCambio(moedasParaConversao);
         }
 
-        return null;
+        return percorrerListaDeTaxas(moedasParaConversao);
     }
 
     public void determinarTaxasDeCambio(String moedasParaConversao){

@@ -21,4 +21,14 @@ public class TestesCalculadoraDeCambio {
         Assert.assertEquals(java.util.Optional.of(17565.0), java.util.Optional.of(resultado));
     }
 
+    @Test
+    public void calcularTaxEValorFinal(){
+        String entrada = "BRLCLP";
+
+        Double taxa = calculadoraDeCambio.determinarTaxaDeCambio(entrada);
+        Double resultado = calculadoraDeCambio.calcularValorFinal(100.0, taxa);
+
+        Assert.assertEquals(java.util.Optional.of(17565.0), java.util.Optional.of(resultado));
+    }
+
 }
