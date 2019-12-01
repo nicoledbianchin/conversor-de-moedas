@@ -1,6 +1,6 @@
 public class ValidadorDeMoedas {
 
-    Boolean moedaValida = false;
+    private Boolean moedaValida = false;
 
     public Boolean validarMoeda(String moeda){
         for (Moeda moedasValidas : Moeda.values()){

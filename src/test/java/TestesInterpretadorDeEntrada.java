@@ -3,7 +3,7 @@ import org.junit.Test;
 
 public class TestesInterpretadorDeEntrada {
 
-    InterpretadorDeEntrada interpretador = new InterpretadorDeEntrada();
+    private InterpretadorDeEntrada interpretador = new InterpretadorDeEntrada();
 
     @Test
     public void retornaApenasMoedaInicial(){

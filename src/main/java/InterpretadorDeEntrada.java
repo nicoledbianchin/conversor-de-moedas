@@ -1,10 +1,10 @@
 public class InterpretadorDeEntrada {
 
-    String moedaInicial;
-    Double valor;
-    String moedaFinal;
-    String[] moedas;
-    String moedasFinais;
+    private String moedaInicial;
+    private Double valor;
+    private String moedaFinal;
+    private String[] moedas;
+    private String moedasFinais;
 
     public String extrairMoedaInicial(String entrada) {
         moedaInicial = entrada.substring(0, 3);
