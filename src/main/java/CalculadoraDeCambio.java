@@ -1,10 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class CalculadoraDeCambio {
 
     private Double taxaDeCambio;
-    List<Double> taxas = new ArrayList<>();
 
     public Double determinarTaxaDeCambio(String moedasParaConversao){
         for (TaxaDeCambio taxa : TaxaDeCambio.values()){
