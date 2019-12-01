@@ -19,4 +19,8 @@ public enum TaxaDeCambio {
         this.valor = valor;
     }
 
+    public Double getValor(){
+        return valor;
+    }
+
 }
