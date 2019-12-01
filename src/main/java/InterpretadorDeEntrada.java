@@ -3,9 +3,8 @@ public class InterpretadorDeEntrada {
     String moedaInicial;
     Double valor;
     String moedaFinal;
+    String[] moedas;
     String moedasFinais;
-    String moeda;
-    Boolean maisDeUmaMoeda = false;
 
     public String extrairMoedaInicial(String entrada) {
         moedaInicial = entrada.substring(0, 3);
@@ -18,9 +17,14 @@ public class InterpretadorDeEntrada {
     }
 
     public String extrairMoedaFinal(String entrada){
-        moedaFinal = entrada.split(" ")[1];
-        if (entrada.split(" ").length > 2){
-            return moedasFinais = moedaFinal + " " + entrada.split(" ")[2];
+        moedas = entrada.split(" ");
+        moedaFinal = moedas[1];
+        moedasFinais = moedas[1];
+        if (moedas.length > 2){
+            for (int i = 2; i < moedas.length; i++){
+                moedasFinais = moedasFinais + " " + moedas[i];
+            }
+            return moedasFinais;
         } else{
             return moedaFinal;
         }
