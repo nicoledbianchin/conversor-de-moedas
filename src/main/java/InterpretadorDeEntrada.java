@@ -20,7 +20,7 @@ public class InterpretadorDeEntrada {
     public String extrairMoedaFinal(String entrada){
         moedaFinal = entrada.split(" ")[1];
         if (entrada.split(" ").length > 2){
-            return moedasFinais = moedaFinal + entrada.split(" ")[2];
+            return moedasFinais = moedaFinal + " " + entrada.split(" ")[2];
         } else{
             return moedaFinal;
         }

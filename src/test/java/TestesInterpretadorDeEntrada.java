@@ -32,4 +32,13 @@ public class TestesInterpretadorDeEntrada {
         Assert.assertEquals(moedaFinal, "CLP");
     }
 
+    @Test
+    public void retornaDuasMoedasFinais(){
+        String entrada = "BRL100 CLP EUR";
+
+        String moedasFinais = interpretador.extrairMoedaFinal(entrada);
+
+        Assert.assertEquals(moedasFinais, "CLP EUR");
+    }
+
 }
