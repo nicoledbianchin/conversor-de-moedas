@@ -1,0 +1,6 @@
+Pontos positivos:
+-O interpretador suporta mais de um tipo de moeda final.
+-Classe validador tinha código repetido, consegui diminuir usando um método do enum de Moedas.
+
+Pontos de melhoria:
+-Método extrair moeda final no interpretador pode ser construira melhor.
