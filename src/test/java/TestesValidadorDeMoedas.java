@@ -7,7 +7,7 @@ public class TestesValidadorDeMoedas {
 
     @Test
     public void testaMoedaValida(){
-        String moeda = "BRL";
+        String moeda = "EUR";
 
         Boolean valida = validador.validarMoeda(moeda);
 

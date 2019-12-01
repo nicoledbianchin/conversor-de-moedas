@@ -6,6 +6,7 @@ public class ValidadorDeMoedas {
         for (Moeda moedasValidas : Moeda.values()){
             if (moeda.equals(moedasValidas.getMoeda())) {
                 moedaValida = true;
+                break;
             }
         }
         return moedaValida;
