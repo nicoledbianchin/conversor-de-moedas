@@ -19,20 +19,19 @@ public class App {
         Boolean validacaoMoedaInicial = validadorDeMoedas.validarMoeda(moedaInicial);
         Boolean validacaoMoedaFinal = validadorDeMoedas.validarMoeda(moedaFinal);
 
-        if (!validacaoMoedaInicial){
+        if (!validacaoMoedaInicial) {
             System.out.println("Moeda não suportada: " + moedaInicial);
         }
-        if (!validacaoMoedaFinal){
+        else if (!validacaoMoedaFinal) {
             System.out.println("Moeda não suportada: " + moedaFinal);
+        } else {
+            Double valor = interpretadorDeEntrada.extrairValor(entrada);
+            Double taxaDeCambio = calculadoraDeCambio.determinarTaxaDeCambio(moedasParaConversao);
+            Double resultado = calculadoraDeCambio.calcularValorFinal(valor, taxaDeCambio);
+
+            System.out.println(formatadorDeSaida.formatarSaida(moedaFinal, resultado));
+
+            scanner.close();
         }
-
-        Double valor = interpretadorDeEntrada.extrairValor(entrada);
-        Double taxaDeCambio = calculadoraDeCambio.determinarTaxaDeCambio(moedasParaConversao);
-        Double resultado = calculadoraDeCambio.calcularValorFinal(valor, taxaDeCambio);
-
-        System.out.println(formatadorDeSaida.formatarSaida(moedaFinal, resultado));
-
-        scanner.close();
     }
-
 }
