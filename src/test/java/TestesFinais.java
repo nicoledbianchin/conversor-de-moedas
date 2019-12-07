@@ -18,8 +18,8 @@ public class TestesFinais {
         String moedasConversao = interpretadorDeEntrada.detectarMoedaParaConversao(moedaInicial, moedaFinal);
         Double valor = interpretadorDeEntrada.extrairValor(entrada);
 
-        Boolean validacaoInicial = validadorDeMoedas.validarUmaMoeda(moedaInicial);
-        Boolean validacaoFinal = validadorDeMoedas.validarUmaMoeda(moedaFinal);
+        Boolean validacaoInicial = validadorDeMoedas.validarMoeda(moedaInicial);
+        Boolean validacaoFinal = validadorDeMoedas.validarMoeda(moedaFinal);
         Double taxa = calculadoraDeCambio.determinarTaxaDeCambio(moedasConversao);
         Double resultado = calculadoraDeCambio.calcularValorFinal(valor, taxa);
 
