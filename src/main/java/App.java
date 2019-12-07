@@ -1,3 +1,8 @@
+import calculos.CalculadoraDeCambio;
+import tratamentoDeDados.FormatadorDeSaida;
+import tratamentoDeDados.InterpretadorDeEntrada;
+import validacoes.ValidadorDeMoedas;
+
 import java.util.Scanner;
 
 public class App {
