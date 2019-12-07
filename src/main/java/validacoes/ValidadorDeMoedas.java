@@ -11,6 +11,8 @@ public class ValidadorDeMoedas {
             if (moeda.equals(moedasValidas.getMoeda())) {
                 moedaValida = true;
                 break;
+            } else{
+                moedaValida = false;
             }
         }
         return moedaValida;
