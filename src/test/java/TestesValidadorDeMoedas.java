@@ -10,7 +10,7 @@ public class TestesValidadorDeMoedas {
     public void testaMoedaValida(){
         String moeda = "EUR";
 
-        Boolean valida = validador.validarMoeda(moeda);
+        Boolean valida = validador.validarUmaMoeda(moeda);
 
         Assert.assertEquals(true, valida);
     }
@@ -19,7 +19,7 @@ public class TestesValidadorDeMoedas {
     public void testaMoedaInvalida(){
         String moeda = "ARS";
 
-        Boolean invalida = validador.validarMoeda(moeda);
+        Boolean invalida = validador.validarUmaMoeda(moeda);
 
         Assert.assertEquals(false, invalida);
     }

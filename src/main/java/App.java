@@ -16,8 +16,8 @@ public class App {
         String moedaFinal = interpretadorDeEntrada.extrairMoedaFinal(entrada);
         String moedasParaConversao = interpretadorDeEntrada.detectarMoedaParaConversao(moedaInicial, moedaFinal);
 
-        Boolean validacaoMoedaInicial = validadorDeMoedas.validarMoeda(moedaInicial);
-        Boolean validacaoMoedaFinal = validadorDeMoedas.validarMoeda(moedaFinal);
+        Boolean validacaoMoedaInicial = validadorDeMoedas.validarUmaMoeda(moedaInicial);
+        Boolean validacaoMoedaFinal = validadorDeMoedas.validarUmaMoeda(moedaFinal);
 
         if (!validacaoMoedaInicial) {
             System.out.println("Moeda não suportada: " + moedaInicial);
