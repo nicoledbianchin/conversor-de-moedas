@@ -23,7 +23,7 @@ public class TestesCalculadoraDeCambio {
     }
 
     @Test
-    public void calcularTaxEValorFinal(){
+    public void calcularTaxaEValorFinal(){
         String entrada = "BRLCLP";
 
         Double taxa = calculadoraDeCambio.determinarTaxaDeCambio(entrada);
