@@ -7,8 +7,6 @@ public class TestesCalculadoraDeCambio {
 
     private CalculadoraDeCambio calculadoraDeCambio = new CalculadoraDeCambio();
 
-    InterpretadorDeEntrada interpretadorDeEntrada = new InterpretadorDeEntrada();
-
     @Test
     public void calcularValorFinal(){
         Double resultado = calculadoraDeCambio.calcularValorFinal(100.0, 175.65);
