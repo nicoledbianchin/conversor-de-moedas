@@ -40,15 +40,6 @@ public class InterpretadorDeEntrada {
             }
         }
         return moedasFinais;
-//        moedaFinal = moeda[1];
-//        if (moeda.length > 2){
-//            for (int i = 2; i < moeda.length; i++){
-//                moedaFinal = moedaFinal + " " + moeda[i];
-//            }
-//            return moedaFinal;
-//        } else{
-//            return moedaFinal;
-//        }
     }
 
     public int retornaQuantidadeMoedasFinais(String moedasFinais) {
@@ -56,28 +47,4 @@ public class InterpretadorDeEntrada {
         return lista.length;
     }
 
-//    public double detectarTaxaDeCambio(Moeda moedaInicial, Moeda moedaFinal){
-//        TaxaDeCambio taxaDeCambio = new TaxaDeCambio(moedaInicial);
-//        double valor = taxaDeCambio.taxas.get(moedaFinal);
-//        return valor;
-//    }
-//
-//    public String detectarMoedaParaConversao(String origem, String destino){
-//        if (destino.length() > 3){
-//            return detectarMoedasParaConversao(origem, destino);
-//        }
-//        else {
-//            return origem + destino;
-//        }
-//    }
-//
-//    public String detectarMoedasParaConversao(String origem, String destinos){
-//        String[] lista = destinos.split(" ");
-//        String moedas = origem + lista[0];
-//        for (int i = 1; i < lista.length; i++){
-//            moedas = moedas + " " + origem + lista[i];
-//        }
-//        return moedas;
-
-//    }
 }
