@@ -57,4 +57,8 @@ public class InterpretadorDeEntrada {
         return moedas;
     }
 
+    public int retornaQuantidadeMoedasFinais(String moedasFinais) {
+        String[] lista = moedasFinais.split(" ");
+        return lista.length;
+    }
 }
