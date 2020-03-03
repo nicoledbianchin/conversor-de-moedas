@@ -47,4 +47,9 @@ public class InterpretadorDeEntrada {
         return lista.length;
     }
 
+    public double detectarTaxaDeCambio(Moeda moedaInicial, Moeda moedaFinal){
+        TaxaDeCambio taxaDeCambio = new TaxaDeCambio(moedaInicial);
+        double valor = taxaDeCambio.taxas.get(moedaFinal);
+        return valor;
+    }
 }
