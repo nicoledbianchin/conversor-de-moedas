@@ -33,7 +33,7 @@ public class TaxaDeCambio {
 
     public double retornarTaxa(Moeda moedaInicial, Moeda moedaFinal){
         TaxaDeCambio taxaDeCambio = new TaxaDeCambio(moedaInicial);
-        double valor = taxas.get(moedaFinal);
+        double valor = taxaDeCambio.taxas.get(moedaFinal);
         return valor;
     }
 
