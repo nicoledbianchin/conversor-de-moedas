@@ -3,14 +3,24 @@ package tratamentoDeDados;
 import valoresMoedasETaxas.Moeda;
 import valoresMoedasETaxas.TaxaDeCambio;
 
+import java.util.ArrayList;
+import java.util.EnumSet;
+import java.util.List;
+
 public class InterpretadorDeEntrada {
 
-    String moedaInicial;
+    Moeda moedaInicial;
+    List<Moeda> moedasIniciais = new ArrayList<Moeda>(EnumSet.allOf(Moeda.class));
     Double valor;
     String moedaFinal;
 
-    public String extrairMoedaInicial(String entrada) {
-        moedaInicial = entrada.substring(0, 3);
+    public Moeda extrairMoedaInicial(String entrada) {
+        String moedaEntrada = entrada.substring(0, 3);
+        for (Moeda moeda : moedasIniciais){
+            if (moedaEntrada.equals(moeda.getMoeda())){
+                moedaInicial = moeda;
+            }
+        }
         return moedaInicial;
     }
 
