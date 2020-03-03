@@ -1,27 +1,39 @@
 package valoresMoedasETaxas;
 
-public enum TaxaDeCambio {
+import java.util.HashMap;
+import java.util.Map;
 
-    BRLCLP(175.65),
-    BRLEUR(0.23),
-    BRLUSD(0.23),
-    CLPBRL(0.0057),
-    CLPEUR(0.0013),
-    CLPUSD(0.0012),
-    EURBRL(4.29),
-    EURCLP(754.01),
-    EURUSD(1.101),
-    USDBRL(4.23),
-    USDCLP(804.5),
-    USDEUR(0.907);
+import static valoresMoedasETaxas.Moeda.*;
 
-    private Double valor;
+public class TaxaDeCambio {
 
-    TaxaDeCambio(Double valor){
-        this.valor = valor;
+    public Moeda moedaInicial;
+    private Map<Moeda, Double> taxas = new HashMap<>();
+
+    TaxaDeCambio(Moeda moedaInicial) {
+        this.moedaInicial = moedaInicial;
+        if(moedaInicial == BRL ) {
+            taxas.put(CLP, 175.65);
+            taxas.put(EUR, 0.23);
+            taxas.put(USD, 0.23);
+        } else if(moedaInicial == CLP) {
+            taxas.put(BRL, 0.0057);
+            taxas.put(EUR, 0.0013);
+            taxas.put(USD, 0.0012);
+        } else if(moedaInicial == EUR) {
+            taxas.put(BRL, 4.29);
+            taxas.put(CLP, 754.01);
+            taxas.put(USD, 1.101);
+        } else if(moedaInicial == USD) {
+            taxas.put(BRL, 4.23);
+            taxas.put(CLP, 804.5);
+            taxas.put(EUR, 0.907);
+        }
     }
 
-    public Double getValor(){
+    public double retornarTaxa(Moeda moedaInicial, Moeda moedaFinal){
+        TaxaDeCambio taxaDeCambio = new TaxaDeCambio(moedaInicial);
+        double valor = taxas.get(moedaFinal);
         return valor;
     }
 
