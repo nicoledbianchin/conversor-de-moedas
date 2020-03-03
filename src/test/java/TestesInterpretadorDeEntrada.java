@@ -46,23 +46,25 @@ public class TestesInterpretadorDeEntrada {
         Assert.assertEquals(Moeda.EUR, moedasFinais.get(1));
     }
 
-//    @Test
-//    public void retornaTodasMoedasFinais(){
-//        String entrada = "BRL100 EUR USD CLP";
-//
-//        String moedasFinais = interpretador.extrairMoedaFinal(entrada);
-//
-//        Assert.assertEquals("EUR USD CLP", moedasFinais);
-//    }
-//
-//    @Test
-//    public void retornaQuantasMoedasFinaisSao(){
-//        String moedasFinais = "BRL EUR USD";
-//
-//        int quantidadeMoedasFinais = interpretador.retornaQuantidadeMoedasFinais(moedasFinais);
-//
-//        Assert.assertEquals(3, quantidadeMoedasFinais);
-//    }
+    @Test
+    public void retornaTodasMoedasFinais(){
+        String entrada = "BRL100 EUR USD CLP";
+
+        List<Moeda> moedasFinais = interpretador.extrairMoedasFinais(entrada);
+
+        Assert.assertEquals(Moeda.EUR, moedasFinais.get(0));
+        Assert.assertEquals(Moeda.USD, moedasFinais.get(1));
+        Assert.assertEquals(Moeda.CLP, moedasFinais.get(2));
+    }
+
+    @Test
+    public void retornaQuantasMoedasFinaisSao(){
+        String moedasFinais = "BRL EUR USD";
+
+        int quantidadeMoedasFinais = interpretador.retornaQuantidadeMoedasFinais(moedasFinais);
+
+        Assert.assertEquals(3, quantidadeMoedasFinais);
+    }
 
 //    @Test
 //    public void retornaMoedaInicialMaisFinal(){
