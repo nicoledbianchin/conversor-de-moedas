@@ -48,7 +48,7 @@ public class TestesFinais {
         for(Moeda moedaFinal : moedasFinais) {
             taxa = interpretadorDeEntrada.detectarTaxaDeCambio(moedaInicial, moedaFinal);
             resultado = calculadoraDeCambio.calcularValorFinal(valor, taxa);
-            saida = saida + formatadorDeSaida.formatarSaida(moedaFinal.getMoeda(), resultado) + " ";
+            saida = saida + formatadorDeSaida.formatarSaida(moedaFinal, resultado);
         }
 
         Assert.assertEquals("CLP17565.0 EUR23.0 ", saida);
