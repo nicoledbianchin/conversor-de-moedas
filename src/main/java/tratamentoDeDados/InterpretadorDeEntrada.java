@@ -1,5 +1,8 @@
 package tratamentoDeDados;
 
+import valoresMoedasETaxas.Moeda;
+import valoresMoedasETaxas.TaxaDeCambio;
+
 public class InterpretadorDeEntrada {
 
     String moedaInicial;
@@ -27,6 +30,13 @@ public class InterpretadorDeEntrada {
         } else{
             return moedaFinal;
         }
+    }
+
+
+    public double detectarTaxaDeCambio(Moeda moedaInicial, Moeda moedaFinal){
+        TaxaDeCambio taxaDeCambio = new TaxaDeCambio(moedaInicial);
+        double valor = taxaDeCambio.taxas.get(moedaFinal);
+        return valor;
     }
 
     public String detectarMoedaParaConversao(String origem, String destino){

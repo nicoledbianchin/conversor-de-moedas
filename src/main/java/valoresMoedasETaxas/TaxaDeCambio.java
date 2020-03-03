@@ -8,9 +8,9 @@ import static valoresMoedasETaxas.Moeda.*;
 public class TaxaDeCambio {
 
     public Moeda moedaInicial;
-    private Map<Moeda, Double> taxas = new HashMap<>();
+    public Map<Moeda, Double> taxas = new HashMap<>();
 
-    TaxaDeCambio(Moeda moedaInicial) {
+    public TaxaDeCambio(Moeda moedaInicial) {
         this.moedaInicial = moedaInicial;
         if(moedaInicial == BRL ) {
             taxas.put(CLP, 175.65);
@@ -29,12 +29,6 @@ public class TaxaDeCambio {
             taxas.put(CLP, 804.5);
             taxas.put(EUR, 0.907);
         }
-    }
-
-    public double retornarTaxa(Moeda moedaInicial, Moeda moedaFinal){
-        TaxaDeCambio taxaDeCambio = new TaxaDeCambio(moedaInicial);
-        double valor = taxaDeCambio.taxas.get(moedaFinal);
-        return valor;
     }
 
 }
