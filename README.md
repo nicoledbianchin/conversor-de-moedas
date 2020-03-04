@@ -10,9 +10,9 @@ A requisição deve ser feita da seguinte forma:
 
 `BRLxxx USD`
 
-- BRL = moeda de origem
+- BRL = moeda de origem (apenas uma)
 - xxx = valor
-- USD = moeda de destino
+- USD = moeda de destino (uma ou mais)
 
 A resposta será mostrada da seguinte forma:
 
