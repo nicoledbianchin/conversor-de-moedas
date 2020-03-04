@@ -14,8 +14,6 @@ public class ValidadorMoeda {
         for (Moeda moedaValida : moedasDisponiveis) {
             if (moedaValida.getMoeda().equals(moeda)) {
                 valida = true;
-//            } else if (!moedaValida.getMoeda().equals(moeda) && moedasDisponiveis.isEmpty()){
-//                valida = false;
             }
         }
         return  valida;
