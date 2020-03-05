@@ -10,7 +10,7 @@ public class TestesInterpretadorDeEntrada {
     private InterpretadorDeEntrada interpretador = new InterpretadorDeEntrada();
 
     @Test
-    public void retornaApenasMoedaInicial(){
+    public void retornaApenasMoedaInicial() throws Exception {
         String entrada = "BRL110 CLP";
 
         Moeda moedaInicial = interpretador.extrairMoedaInicial(entrada);
@@ -28,7 +28,7 @@ public class TestesInterpretadorDeEntrada {
     }
 
     @Test
-    public void retornaUmaMoedaFinal(){
+    public void retornaUmaMoedaFinal() throws Exception {
         String entrada = "BRL100 CLP";
 
         List<Moeda> moedaFinal = interpretador.extrairMoedasFinais(entrada);
@@ -37,7 +37,7 @@ public class TestesInterpretadorDeEntrada {
     }
 
     @Test
-    public void retornaDuasMoedasFinais(){
+    public void retornaDuasMoedasFinais() throws Exception {
         String entrada = "BRL100 CLP EUR";
 
         List<Moeda> moedasFinais = interpretador.extrairMoedasFinais(entrada);
@@ -47,7 +47,7 @@ public class TestesInterpretadorDeEntrada {
     }
 
     @Test
-    public void retornaTodasMoedasFinais(){
+    public void retornaTodasMoedasFinais() throws Exception {
         String entrada = "BRL100 EUR USD CLP";
 
         List<Moeda> moedasFinais = interpretador.extrairMoedasFinais(entrada);

@@ -14,7 +14,7 @@ public class TestesFinais {
     private FormatadorDeSaida formatadorDeSaida = new FormatadorDeSaida();
 
     @Test
-    public void calculoFinalApenasUmRetorno(){
+    public void calculoFinalApenasUmRetorno() throws Exception {
         String entrada = "BRL100 CLP";
 
         Moeda moedaInicial = interpretadorDeEntrada.extrairMoedaInicial(entrada);
@@ -34,7 +34,7 @@ public class TestesFinais {
     }
 
     @Test
-    public void calculoFinalMaisDeUmRetorno() {
+    public void calculoFinalMaisDeUmRetorno() throws Exception {
         String entrada = "BRL100 CLP EUR";
 
         Moeda moedaInicial = interpretadorDeEntrada.extrairMoedaInicial(entrada);
