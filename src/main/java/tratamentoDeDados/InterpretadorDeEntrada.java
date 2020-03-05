@@ -15,12 +15,17 @@ public class InterpretadorDeEntrada {
     Moeda moedaInicial;
     Double valor;
 
-    public Moeda extrairMoedaInicial(String entrada) {
+    public Moeda extrairMoedaInicial(String entrada) throws Exception {
         String moedaEntrada = entrada.substring(0, 3);
         for (Moeda moeda : moedasDisponiveis){
+
             if (moedaEntrada.equals(moeda.getMoeda())){
                 moedaInicial = moeda;
+                break;
+            } else if (moeda.equals(moedasDisponiveis.get(moedasDisponiveis.size() - 1))){
+                throw new Exception("Moeda " + moedaEntrada + " inválida");
             }
+
         }
         return moedaInicial;
     }
@@ -30,12 +35,18 @@ public class InterpretadorDeEntrada {
         return valor;
     }
 
-    public List<Moeda> extrairMoedasFinais(String entrada){
+    public List<Moeda> extrairMoedasFinais(String entrada) throws Exception {
         List<String> moedasEntrada = Arrays.asList(entrada.split(" "));
-        for(String moeda : moedasEntrada){
+
+        for(int i = 1; i < moedasEntrada.size(); i++){
+            String moeda = moedasEntrada.get(i);
             for(Moeda moedaDisponivel : moedasDisponiveis) {
+
                 if(moeda.equals(moedaDisponivel.getMoeda())){
                     moedasFinais.add(moedaDisponivel);
+                    break;
+                } else if (moedaDisponivel.equals(moedasDisponiveis.get(moedasDisponiveis.size() - 1))){
+                    throw new Exception("Moeda " + moeda + "inválida.");
                 }
             }
         }
