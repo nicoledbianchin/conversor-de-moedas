@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         InterpretadorDeEntrada interpretadorDeEntrada = new InterpretadorDeEntrada();
         CalculadoraDeCambio calculadoraDeCambio = new CalculadoraDeCambio();
@@ -18,14 +18,14 @@ public class App {
         String entrada = scanner.nextLine();
 
         Moeda moedaInicial = interpretadorDeEntrada.extrairMoedaInicial(entrada);
-        List<Moeda> moedasFInais = interpretadorDeEntrada.extrairMoedasFinais(entrada);
+        List<Moeda> moedasFinais = interpretadorDeEntrada.extrairMoedasFinais(entrada);
         Double valor = interpretadorDeEntrada.extrairValor(entrada);
 
         Double taxa = 0.0;
         Double resultado = 0.0;
         String saida = "";
 
-        for(Moeda moedaFinal : moedasFInais){
+        for(Moeda moedaFinal : moedasFinais){
             taxa = interpretadorDeEntrada.detectarTaxaDeCambio(moedaInicial, moedaFinal);
             resultado = calculadoraDeCambio.calcularValorFinal(valor, taxa);
 
